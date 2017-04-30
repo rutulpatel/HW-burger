@@ -24,5 +24,12 @@
   "bugs": {
     "url": "https://github.com/rutulpatel/HW-burger/issues"
   },
-  "homepage": "https://github.com/rutulpatel/HW-burger#readme"
+  "homepage": "https://github.com/rutulpatel/HW-burger#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.8",
+    "mysql": "^2.13.0"
+  }
 }
