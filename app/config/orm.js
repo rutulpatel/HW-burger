@@ -8,7 +8,7 @@ var orm = {
             function(err, result) {
                 if (err) {
                     throw err;
-                    return false;
+                    return -1;
                 } else {
                     return result;
                 }
@@ -20,7 +20,7 @@ var orm = {
             function(err, result) {
                 if (err) {
                     throw err;
-                    return false;
+                    return -1;
                 } else {
                     return result;
                 }
@@ -32,7 +32,7 @@ var orm = {
             function(err, result) {
                 if (err) {
                     throw err;
-                    return false;
+                    return -1;
                 } else {
                     return result;
                 }
