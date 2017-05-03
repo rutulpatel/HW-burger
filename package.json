@@ -1,35 +1,36 @@
 {
-  "name": "burger",
-  "version": "1.0.0",
-  "description": "HW - Eat the Burger, a node, express, mysql & handlebars coding HW application.",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rutulpatel/HW-burger.git"
-  },
-  "keywords": [
-    "node",
-    "nodejs",
-    "javascript",
-    "mysql",
-    "handlebars",
-    "express-handlebars",
-    "express"
-  ],
-  "author": "Rutul Patel <rutulpatel.rtl@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rutulpatel/HW-burger/issues"
-  },
-  "homepage": "https://github.com/rutulpatel/HW-burger#readme",
-  "dependencies": {
-    "body-parser": "^1.17.1",
-    "express": "^4.15.2",
-    "express-handlebars": "^3.0.0",
-    "method-override": "^2.3.8",
-    "mysql": "^2.13.0"
-  }
+    "name": "burger",
+    "version": "1.0.0",
+    "description": "HW - Eat the Burger, a node, express, mysql & handlebars coding HW application.",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rutulpatel/HW-burger.git"
+    },
+    "keywords": [
+        "node",
+        "nodejs",
+        "javascript",
+        "mysql",
+        "handlebars",
+        "express-handlebars",
+        "express"
+    ],
+    "author": "Rutul Patel <rutulpatel.rtl@gmail.com>",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/rutulpatel/HW-burger/issues"
+    },
+    "homepage": "https://github.com/rutulpatel/HW-burger#readme",
+    "dependencies": {
+        "body-parser": "^1.17.1",
+        "express": "^4.15.2",
+        "express-handlebars": "^3.0.0",
+        "method-override": "^2.3.8",
+        "mysql": "^2.13.0"
+    }
 }
