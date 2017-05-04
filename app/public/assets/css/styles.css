@@ -1,19 +1,22 @@
 .col-md-6.text-center {
-  /*border-right:5px;*/
+    /*border-right:5px;*/
 }
 
-div {
-}
+div {}
 
 @media (min-width:991px) {
-  #to-eat-container {
-    border-right:1px solid;
-  }
+    #to-eat-container {
+        border-right: 1px solid;
+    }
 }
 
 @media (max-width:991px) {
-  #to-eat-container {
-    padding-bottom: 15px;
-    border-bottom:1px solid;
-  }
+    #to-eat-container {
+        padding-bottom: 15px;
+        border-bottom: 1px solid;
+    }
+}
+
+button {
+    margin: 10px;
 }
