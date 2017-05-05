@@ -35,8 +35,8 @@ module.exports = function(app) {
     // Add a burger
     app.post("/api/new", function(req, res) {
         console.log("Adding new burger:");
-        console.log(req.body);
-        burger.insertOne("burgers", "burger_name", req.body.burger, function(data) {
+        console.log(req.body.burgerName);
+        burger.insertOne("burgers", "burger_name", req.body.burgerName, function(data) {
             if (data != -1) {
                 res.json(data);
             } else {
@@ -50,7 +50,8 @@ module.exports = function(app) {
         console.log("HERE-app.delete");
         var reqData = req.body.data;
         console.log(reqData);
-        burger.updateOne("burgers", reqData[0], reqData[1], reqData[2], reqData[3], function(data) {
+        burger.updateOne("burgers", reqData[0], !!reqData[1], reqData[2], reqData[3], function(data) {
+            console.log("response", data);
             if (data != -1) {
                 console.log(data);
                 res.json(data);

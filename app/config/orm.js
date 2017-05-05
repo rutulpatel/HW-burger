@@ -28,9 +28,10 @@ var orm = {
                 }
             });
     },
-    insertOne: function(tableName, colNames, colValues, callback) {
-        var q = "INSERT INTO ?? (??) VALUES (??)";
-        connection.query(q, [tableName, colNames.toString(), colValues.toString()],
+    insertOne: function(tableName, colName, colValue, callback) {
+        var q = "INSERT INTO " + tableName + " (" + colName + ") VALUES ('" + colValue + "')";
+        // var q = "INSERT INTO ?? (??) VALUES (?);";
+        connection.query(q, [],
             function(err, result) {
                 if (err) {
                     console.log(err);
@@ -41,9 +42,10 @@ var orm = {
             });
     },
     updateOne: function(tableName, colName, colValue, matchColName, matchColValue, callback) {
-        var q = "UPDATE " + tableName + " SET " + colName + "=" + colValue + " WHERE " + matchColName + "=" + matchColValue;
+        // var q = "UPDATE " + tableName + " SET " + colName + "=" + colValue + " WHERE " + matchColName + "=" + matchColValue;
+        var q = "UPDATE ?? SET ?? = ? WHERE ?? = ?"
         console.log(q);
-        connection.query(q, [],
+        connection.query(q, [tableName, colName, colValue, matchColName, matchColValue],
             function(err, result) {
                 if (err) {
                     console.log(err);

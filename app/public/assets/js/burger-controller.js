@@ -33,7 +33,6 @@ $(document).ready(function() {
         $.get("/api/all?devoured=true", function(data) {
             console.log(data);
             $("#eaten-container").empty();
-
             for (var i = 0; i < data.length; i++) {
 
                 var div = $("<div>");
@@ -52,7 +51,12 @@ $(document).ready(function() {
 
 
     $("#submitBtn").on("click", function() {
-        alert("clicked");
+        var data = { "burgerName": $("#burgerName").val() };
+        $.post("/api/new", data, function(result) {
+            $("#burgerName").val("");
+            loadData();
+        });
+
     });
 
     loadData();
