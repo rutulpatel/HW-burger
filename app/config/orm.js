@@ -33,7 +33,7 @@ var orm = {
         connection.query(q, [tableName, colNames.toString(), colValues.toString()],
             function(err, result) {
                 if (err) {
-                    throw err;
+                    console.log(err);
                     return -1;
                 } else {
                     return callback(result);
@@ -41,11 +41,12 @@ var orm = {
             });
     },
     updateOne: function(tableName, colName, colValue, matchColName, matchColValue, callback) {
-        var q = "UPDATE ?? SET ??=?? WHERE ??=??";
-        connection.query(q, [tableName, colNames.toString(), colValues.toString(), matchColName.toString(), matchColValue.toString()],
+        var q = "UPDATE " + tableName + " SET " + colName + "=" + colValue + " WHERE " + matchColName + "=" + matchColValue;
+        console.log(q);
+        connection.query(q, [],
             function(err, result) {
                 if (err) {
-                    throw err;
+                    console.log(err);
                     return -1;
                 } else {
                     return callback(result);

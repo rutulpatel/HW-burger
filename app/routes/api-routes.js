@@ -44,4 +44,19 @@ module.exports = function(app) {
             }
         });
     });
+
+
+    app.put("/api/all", function(req, res) {
+        console.log("HERE-app.delete");
+        var reqData = req.body.data;
+        console.log(reqData);
+        burger.updateOne("burgers", reqData[0], reqData[1], reqData[2], reqData[3], function(data) {
+            if (data != -1) {
+                console.log(data);
+                res.json(data);
+            } else {
+                console.log("FATAL ERROR in orm.js > deleteOne() function.");
+            }
+        });
+    });
 }
