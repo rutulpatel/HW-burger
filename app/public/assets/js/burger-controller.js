@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     function loadToEatData() {
         $.get("/api/all?devoured=false", function(data) {
-            console.log(data);
+            // console.log(data);
             $("#to-eat-container").empty();
             for (var i = 0; i < data.length; i++) {
 
@@ -31,7 +31,7 @@ $(document).ready(function() {
 
     function loadEatenData() {
         $.get("/api/all?devoured=true", function(data) {
-            console.log(data);
+            // console.log(data);
             $("#eaten-container").empty();
             for (var i = 0; i < data.length; i++) {
 
@@ -44,20 +44,26 @@ $(document).ready(function() {
         });
     }
 
+    function addBurger(burgerName) {
+        if (burgerName && burgerName != "") {
+            var data = { "burgerName": burgerName };
+            $.post("/api/new", data, function(result) {
+                $("#burgerName").val("");
+                loadData();
+            });
+        } else {
+            alert("Please enter a burger name...");
+        }
+    }
+
+    $("#submitBtn").on("click", function() {
+        addBurger($("#burgerName").val());
+    });
+
     function loadData() {
         loadToEatData();
         loadEatenData();
     }
-
-
-    $("#submitBtn").on("click", function() {
-        var data = { "burgerName": $("#burgerName").val() };
-        $.post("/api/new", data, function(result) {
-            $("#burgerName").val("");
-            loadData();
-        });
-
-    });
 
     loadData();
 });
