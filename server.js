@@ -5,7 +5,7 @@ var bodyparser = require('body-parser');
 
 // Set up express app instance
 var app = express();
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 8080;
 
 // Set up express app to handle data parsing
 app.use(bodyparser.json());
