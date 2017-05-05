@@ -4,6 +4,9 @@ HW - Eat the Burger, a node, express, mysql &amp; handlebars coding HW applicati
 # Description
 A simple burger application that is made using technologies listed below which allows user to add burgers & update their status in the database.
 
+# Live URL
+http://rutulpatel.com:8080/
+
 ## Technologies used
  - nodejs
  - expressjs, express-handlebars
