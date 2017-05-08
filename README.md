@@ -7,6 +7,9 @@ A simple burger application that is made using technologies listed below which a
 # Live URL
 http://rutulpatel.com:8080/
 
+# Also, deployed on Heroku (if live url doesn't work)
+https://burger-napp.herokuapp.com/api/all
+
 ## Technologies used
  - nodejs
  - expressjs, express-handlebars
