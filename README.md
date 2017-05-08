@@ -7,7 +7,7 @@ A simple burger application that is made using technologies listed below which a
 # Live URL
 http://rutulpatel.com:8080/
 
-# Also, deployed on Heroku (if live url doesn't work)
+# Also, deployed on Heroku (if live url doesn't work use following)
 https://burger-napp.herokuapp.com/
 
 ## Technologies used
